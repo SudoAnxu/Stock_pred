@@ -1,103 +1,112 @@
-📈 AAPL Stock Price Prediction using CNN
-This project demonstrates how to build a deep learning model using 1D Convolutional Neural Networks (CNN) to predict Apple's stock closing prices. The model uses historical stock data fetched via the yfinance API, processes it into time-series format, and trains a CNN model to predict future prices.
+Sure! Here's a professional and informative `README.md` file for your project:
 
-🚀 Features
-Fetches real-time historical stock data from Yahoo Finance.
+---
 
-Preprocesses and normalizes data using MinMaxScaler.
+# 📈 AAPL Stock Price Prediction using CNN
 
-Converts time series into supervised learning format.
+This project demonstrates how to build a deep learning model using **1D Convolutional Neural Networks (CNN)** to predict Apple's stock closing prices. The model uses historical stock data fetched via the `yfinance` API, processes it into time-series format, and trains a CNN model to predict future prices.
 
-Trains a CNN on stock price sequences.
+---
 
-Evaluates performance using Mean Squared Error (MSE).
+## 🚀 Features
 
-Visualizes predicted vs actual stock prices.
+* Fetches real-time historical stock data from Yahoo Finance.
+* Preprocesses and normalizes data using `MinMaxScaler`.
+* Converts time series into supervised learning format.
+* Trains a CNN on stock price sequences.
+* Evaluates performance using Mean Squared Error (MSE).
+* Visualizes predicted vs actual stock prices.
 
-🛠️ Technologies Used
-Python
+---
 
-yfinance
+## 🛠️ Technologies Used
 
-NumPy, Pandas
+* Python
+* [yfinance](https://pypi.org/project/yfinance/)
+* NumPy, Pandas
+* Scikit-learn (MinMaxScaler, train\_test\_split)
+* TensorFlow / Keras (Sequential API, Conv1D, Dense, Dropout)
+* Matplotlib (for result visualization)
 
-Scikit-learn (MinMaxScaler, train_test_split)
+---
 
-TensorFlow / Keras (Sequential API, Conv1D, Dense, Dropout)
+## 📊 Dataset
 
-Matplotlib (for result visualization)
+Data is downloaded directly from Yahoo Finance using the `yfinance` package for the ticker:
 
-📊 Dataset
-Data is downloaded directly from Yahoo Finance using the yfinance package for the ticker:
-
-yaml
-Copy
-Edit
+```
 AAPL (Apple Inc.)
 Date Range: 2015-01-01 to 2023-01-01
-🧠 Model Architecture
-Conv1D Layer (64 filters, kernel size 3)
+```
 
-Dropout Layer (0.2)
+---
 
-Conv1D Layer (64 filters, kernel size 3)
+## 🧠 Model Architecture
 
-Flatten Layer
+* Conv1D Layer (64 filters, kernel size 3)
+* Dropout Layer (0.2)
+* Conv1D Layer (64 filters, kernel size 3)
+* Flatten Layer
+* Dense Layer (50 units, ReLU)
+* Dense Output Layer (1 unit)
 
-Dense Layer (50 units, ReLU)
+Loss function: `Mean Squared Error`
+Optimizer: `Adam`
 
-Dense Output Layer (1 unit)
+---
 
-Loss function: Mean Squared Error
-Optimizer: Adam
+## 📈 Training Performance
 
-📈 Training Performance
-Trained for 20 epochs.
+* Trained for **20 epochs**.
+* Achieved a **final validation loss \~ 0.0014**.
+* Captured trends effectively in test data.
+* Visualized actual vs predicted prices on a time-series graph.
 
-Achieved a final validation loss ~ 0.0014.
+---
 
-Captured trends effectively in test data.
+## 📌 Instructions
 
-Visualized actual vs predicted prices on a time-series graph.
+1. **Install dependencies**:
 
-📌 Instructions
-Install dependencies:
+   ```bash
+   pip install yfinance numpy pandas scikit-learn tensorflow matplotlib
+   ```
 
-bash
-Copy
-Edit
-pip install yfinance numpy pandas scikit-learn tensorflow matplotlib
-Run the script:
+2. **Run the script**:
 
-bash
-Copy
-Edit
-python stock_price_prediction.py
-Output:
+   ```bash
+   python stock_price_prediction.py
+   ```
 
-Model training summary.
+3. **Output**:
 
-Test set loss.
+   * Model training summary.
+   * Test set loss.
+   * Matplotlib plot comparing predicted vs actual prices.
 
-Matplotlib plot comparing predicted vs actual prices.
+---
 
-📉 Result Visualization
-Blue Line: Actual Stock Prices
+## 📉 Result Visualization
 
-Red Line: Predicted Stock Prices
+* Blue Line: Actual Stock Prices
+* Red Line: Predicted Stock Prices
 
 The plot clearly shows that the CNN model captures the stock price patterns over time and can be used for trend forecasting.
 
-📌 Notes
-This is a demonstration for educational purposes and does not offer financial advice.
+---
 
-For better generalization, try experimenting with other models like LSTM, GRU, or hybrid models.
+## 📌 Notes
 
-Expand the dataset with more features like volume, high, low, or use multi-step forecasting.
+* This is a demonstration for educational purposes and does **not** offer financial advice.
+* For better generalization, try experimenting with other models like LSTM, GRU, or hybrid models.
+* Expand the dataset with more features like volume, high, low, or use multi-step forecasting.
 
-🙌 Author
-Priyangshu Karmakar
+---
+
+## 🙌 Author
+
+**Priyangshu Karmakar**
 B.Tech, IIT Kharagpur
-📧 priyangshukarmakar@gmail.com
-🔗 GitHub
+📧 [priyangshukarmakar@gmail.com](mailto:priyangshu.0718k@gmail.com)
+🔗 [GitHub](https://github.com/SudoAnxu)
 
