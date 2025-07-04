@@ -1,6 +1,3 @@
-Sure! Here's a professional and informative `README.md` file for your project:
-
----
 
 # 📈 AAPL Stock Price Prediction using CNN
 
